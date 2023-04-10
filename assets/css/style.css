@@ -5,15 +5,6 @@
   padding: 0;
 }
 
-h1 {
-  font-family: 'Shrikhand', cursive;
-  width: 162px;
-  margin: auto;
-  font-size: 30px;
-  font-weight: 400;
-  text-align: center;
-}
-
 a {
   text-decoration: none;
 }
@@ -31,13 +22,17 @@ p {
 }
 
 
-
 /***** header *****/
 header {
   height: 62px;
   display: flex;
   align-content: center;
   align-items: center;
+}
+
+header img {
+  width: 162px;
+  margin: auto;
 }
 
 header a {
@@ -83,7 +78,7 @@ header a {
   text-align: center;
 }
 
-.explorer h2 {
+.explorer h1 {
   padding: 33px 0 12px 0
 }
 
@@ -116,4 +111,14 @@ footer {
   color: white;
   background: var(--noir-clair);
 
+}
+
+footer em {
+  font-family: 'Shrikhand', cursive;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+footer a {
+  color: white;
 }
