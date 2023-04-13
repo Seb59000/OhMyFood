@@ -1,0 +1,26 @@
+/***** header *****/
+header {
+    height: 62px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    i {
+        font-size: 20px;
+        color: $noir-clair;
+    }
+
+    h1 {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+        font-size: 30px;
+        width: 162px;
+        margin: auto;
+    }
+
+    a {
+        position: absolute;
+        font-size: 26px;
+        margin: 23px;
+    }
+}
