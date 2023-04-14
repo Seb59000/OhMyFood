@@ -1,13 +1,12 @@
-@import "./Utils/variables";
-@import "./Utils/functions";
-@import "./Utils/mixins";
-@import "./Base/base";
-@import "./Base/typography";
-@import "./Components/buttons";
-@import "./Layouts/header";
-@import "./Layouts/search";
-@import "./Layouts/explore";
-@import "./Layouts/restaurants";
-@import "./Layouts/functioning";
-@import "./Layouts/footer";
-@import "./Pages/restaurants";
+@media screen and (max-width: 767.98px) {
+    @import "./Utils/variables";
+    @import "./Utils/functions";
+    @import "./Utils/mixins";
+    @import "./Base/base";
+    @import "./Base/typography";
+    @import "./Components/buttons";
+    @import "./Layouts/header";
+    @import "./Layouts/footer";
+    @import "./Pages/home";
+    @import "./Pages/restaurants";
+}

@@ -2,15 +2,33 @@
 footer {
     color: white;
     background: $noir-clair;
+    padding-left: 1.5em;
 
-}
+    h2 {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+        font-size: 18px;
+        padding: 1em 0 0.5em
+    }
 
-footer em {
-    font-family: 'Shrikhand', cursive;
-    font-size: 30px;
-    font-weight: 400;
-}
+    p {
+        padding-top: 10px;
+    }
 
-footer a {
-    color: white;
+    i {
+        font-size: 13px;
+        margin-right: 1em;
+    }
+
+    address {
+        padding: 0.7em 0 2em 0;
+    }
+
+    a {
+        color: white;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        // padding: 1em;
+    }
 }

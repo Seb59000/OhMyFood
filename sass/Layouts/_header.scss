@@ -1,6 +1,6 @@
 /***** header *****/
 header {
-    height: 62px;
+    height: 4em;
     display: flex;
     align-content: center;
     align-items: center;
@@ -14,13 +14,12 @@ header {
         font-family: 'Shrikhand', cursive;
         font-weight: 400;
         font-size: 30px;
-        width: 162px;
         margin: auto;
     }
 
     a {
         position: absolute;
         font-size: 26px;
-        margin: 23px;
+        margin: 1em;
     }
 }

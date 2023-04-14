@@ -1,0 +1,165 @@
+/***** search *****/
+.search {
+
+    background: $gris-clair;
+    color: $noir-clair;
+    border-top: $gris-moyen solid 2px;
+
+    div {
+        display: flex;
+        align-content: center;
+        width: 10em;
+        margin: auto;
+    }
+
+    i {
+        margin: 1em 0.5em 0 0;
+    }
+}
+
+input[type="text"] {
+    border: none;
+    background-color: $gris-clair;
+    color: $noir-clair;
+    height: 3.2em;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
+/***** explore *****/
+.explore {
+    background: $gris;
+    padding-bottom: 28px;
+
+    h2 {
+        padding: 33px 0 12px 0
+    }
+}
+
+.explore_container {
+    margin: auto;
+    width: 75%;
+    text-align: center;
+}
+
+/***** functioning *****/
+.functioning {
+    padding-left: 4%;
+    margin-bottom: 70px;
+
+    h2 {
+        margin-top: 48px;
+        margin-bottom: 34px;
+    }
+
+    i {
+        color: $gris-sombre;
+        margin: 0 20px;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    &_card {
+        display: flex;
+        background: $gris;
+        width: 79%;
+        padding: 20px;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+        &_number {
+            background-color: $primaire;
+            color: white;
+            width: 30px;
+            height: 24px;
+            padding-top: 5px;
+            margin-left: -35px;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        &_content {
+            display: flex;
+            margin-top: 5px;
+        }
+    }
+
+    .functioning_card_logo-violet {
+        color: $primaire;
+    }
+}
+
+/***** restaurants *****/
+#restaurants {
+    background: $gris;
+    padding: 0 4% 0 4%;
+    margin-bottom: 70px;
+
+    article {
+        background-color: white;
+        border-radius: 25px;
+        margin-bottom: 1em;
+    }
+
+    h2 {
+        padding: 52px 0 16px 0;
+    }
+
+    img {
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+        border-radius: 25px 25px 0 0;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 18px;
+        color: black;
+    }
+
+    p {
+        padding: 3px 0 10px 0;
+        font-weight: 300;
+        font-size: 17px;
+        color: black;
+    }
+
+    i {
+        font-size: 23px;
+    }
+}
+
+.restaurants_nouveau {
+    color: $vert;
+    background: $tertiaire;
+    width: 80px;
+    height: 25px;
+    padding-top: 7px;
+    position: absolute;
+    right: 10%;
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+}
+
+.restaurants_card {
+    display: flex;
+    justify-content: space-between;
+
+    &_heart {
+        margin: 25px;
+    }
+}
+
+.restaurants_card_txt {
+    margin: 10px 0 0 12px;
+}
