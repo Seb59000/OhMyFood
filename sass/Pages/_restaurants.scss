@@ -4,23 +4,22 @@
     object-fit: cover;
 }
 
-.menu {
-    background: white;
+.menu-background {
+    background: $gris;
+    margin-top: 13.7em;
+    border-radius: 33px;
+    padding: 1em;
+
+    /********* media queries **********/
+    @media screen and (min-width: 1055px) {
+        width: 1055px;
+        margin: auto;
+        margin-top: 13.7em;
+    }
 }
 
 .overlap {
     display: grid;
-
-    /* Set horizontal alignment of items in, case they have a different width. */
-    /* justify-items: start | end | center | stretch (default); */
-    justify-items: start;
-
-    /* Set vertical alignment of items, in case they have a different height. */
-    /* align-items: start | end | center | stretch (default); */
-    align-items: start;
-
-    grid-template-columns: 100%;
-    // grid-template-rows: 150px 1fr;
 }
 
 .overlap>* {
@@ -28,9 +27,84 @@
     grid-row-start: 1;
 }
 
+.menu {
 
-/* for demonstration purposes only */
-// .overlap>* {
-//     outline: 1px solid red;
-//     background-color: rgba(255, 255, 255, 0.4)
-// }
+    /********* media queries **********/
+    @media screen and (min-width: 634px) {
+        width: 634px;
+        margin: auto;
+    }
+
+    h2 {
+        padding-top: 0.8em;
+        font-family: 'Shrikhand';
+        font-weight: 400;
+        font-size: 28px;
+    }
+
+    &_title {
+        display: flex;
+        justify-content: space-between;
+
+        /********* media queries **********/
+        @media screen and (min-width: 634px) {
+            justify-content: center;
+        }
+
+        &_heart {
+            padding-top: 2.1em;
+
+            /********* media queries **********/
+            @media screen and (min-width: 634px) {
+                margin-left: 1.5em;
+            }
+        }
+    }
+
+    h3 {
+        padding-top: 1.7em;
+        margin-bottom: 1.1em;
+        font-weight: 300;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        span {
+            border-bottom: $tertiaire 0.2rem solid;
+            padding-bottom: 0.3em;
+        }
+    }
+
+    h4 {
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 0.3em;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 15.0431px;
+    }
+
+    &_item {
+        background: white;
+        padding: 0.8em;
+        margin: 0.8em 0;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+        &_line {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-price {
+            font-weight: 700;
+            font-size: 15.0431px;
+        }
+    }
+}
+
+.button {
+    width: 12em;
+    margin-bottom: 1.5em;
+}

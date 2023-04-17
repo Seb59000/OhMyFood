@@ -49,6 +49,18 @@ input[type="text"] {
     padding-left: 4%;
     margin-bottom: 70px;
 
+    /********* media queries **********/
+    @media screen and (min-width: 1055px) {
+        max-width: 1055px;
+        margin: auto;
+        margin-bottom: 30px;
+        padding-left: 0;
+
+        &_cards {
+            display: flex;
+        }
+    }
+
     h2 {
         margin-top: 48px;
         margin-bottom: 34px;
@@ -74,6 +86,12 @@ input[type="text"] {
         border-radius: 20px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 
+        /********* media queries **********/
+        @media screen and (min-width: 1055px) {
+            margin-left: 1em;
+            margin-right: 2em;
+        }
+
         &_number {
             background-color: $primaire;
             color: white;
@@ -97,19 +115,41 @@ input[type="text"] {
 }
 
 /***** restaurants *****/
-#restaurants {
+.restaurants-background {
     background: $gris;
+
+}
+
+#restaurants {
     padding: 0 4% 0 4%;
     margin-bottom: 70px;
+
+    /********* media queries **********/
+    @media screen and (min-width: 1055px) {
+        max-width: 1055px;
+        margin: auto;
+        padding: 0;
+        margin-bottom: 6px;
+    }
 
     article {
         background-color: white;
         border-radius: 25px;
         margin-bottom: 1em;
+
+        /********* media queries **********/
+        @media screen and (min-width: 1055px) {
+            width: 498.65px;
+        }
     }
 
     h2 {
         padding: 52px 0 16px 0;
+
+        /********* media queries **********/
+        @media screen and (min-width: 1055px) {
+            padding: 28px 0 22px 0;
+        }
     }
 
     img {
@@ -134,6 +174,16 @@ input[type="text"] {
 
     i {
         font-size: 23px;
+    }
+}
+
+.restaurants-list {
+
+    /********* media queries **********/
+    @media screen and (min-width: 1055px) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
 

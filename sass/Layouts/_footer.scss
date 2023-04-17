@@ -4,6 +4,15 @@ footer {
     background: $noir-clair;
     padding-left: 1.5em;
 
+
+    /********* media queries **********/
+    @media screen and (min-width: 634px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        height: 114px;
+    }
+
     h2 {
         font-family: 'Shrikhand', cursive;
         font-weight: 400;
@@ -12,7 +21,7 @@ footer {
     }
 
     p {
-        padding-top: 10px;
+        padding-top: 0.2em;
     }
 
     i {
@@ -21,7 +30,7 @@ footer {
     }
 
     address {
-        padding: 0.7em 0 2em 0;
+        padding: 0.3em 0 2em 0;
     }
 
     a {
@@ -29,6 +38,13 @@ footer {
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
-        // padding: 1em;
+    }
+}
+
+.footer-links {
+
+    /********* media queries **********/
+    @media screen and (min-width: 634px) {
+        display: flex;
     }
 }
