@@ -1,3 +1,5 @@
+/* Gradient */
+/***** media queries ******/
 /****** General ***********/
 * {
   margin: 0;
@@ -13,6 +15,15 @@ p {
   font-size: 18px;
 }
 
+.overlap {
+  display: grid;
+}
+
+.overlap > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -25,7 +36,6 @@ p {
   width: 218px;
   padding: 1em 0;
   color: white;
-  /* Button Gradient */
   background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   /* Shadow/Button */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -33,6 +43,35 @@ p {
   font-weight: 500;
   font-size: 16px;
   text-align: center;
+}
+
+.btn-small {
+  width: 12em;
+  margin-bottom: 1.5em;
+}
+
+/****** hearts *******/
+.empty {
+  opacity: 1;
+}
+
+.restaurants_card_heart:hover .full {
+  opacity: 1;
+}
+
+.menu_title_heart:hover .full {
+  opacity: 1;
+}
+
+.menu_title_heart i {
+  font-size: 25px;
+}
+
+.full {
+  opacity: 0;
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /***** header *****/
@@ -65,29 +104,57 @@ footer {
   padding-left: 1.5em;
   /********* media queries **********/
 }
-@media screen and (min-width: 634px) {
+@media screen and (min-width: 767.98px) {
   footer {
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-end;
-    height: 114px;
+    align-items: baseline;
+    padding: 3.5em 2.7em 1.5em 0;
   }
 }
 footer h2 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 18px;
-  padding: 1em 0 0.5em;
+  padding: 1em 0 0.5em 0;
+  /********* media queries **********/
+}
+@media screen and (min-width: 767.98px) {
+  footer h2 {
+    padding: 0 0 0 3%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer h2 {
+    padding: 0 3% 0 5%;
+  }
 }
 footer p {
   padding-top: 0.2em;
+  /********* media queries **********/
+}
+@media screen and (min-width: 767.98px) {
+  footer p {
+    padding-right: 0.5em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer p {
+    padding-right: 0.9em;
+  }
 }
 footer i {
   font-size: 13px;
-  margin-right: 1em;
+  margin-right: 0.5em;
 }
 footer address {
   padding: 0.3em 0 2em 0;
+  /********* media queries **********/
+}
+@media screen and (min-width: 767.98px) {
+  footer address {
+    padding: 0.35em 0 0 0;
+  }
 }
 footer a {
   color: white;
@@ -99,9 +166,14 @@ footer a {
 .footer-links {
   /********* media queries **********/
 }
-@media screen and (min-width: 634px) {
+@media screen and (min-width: 767.98px) {
   .footer-links {
     display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer-links-gap {
+    margin-right: 1.9em;
   }
 }
 
@@ -153,12 +225,12 @@ input[type=text] {
   margin-bottom: 70px;
   /********* media queries **********/
 }
-@media screen and (min-width: 1055px) {
+@media screen and (min-width: 1024px) {
   .functioning {
     max-width: 1055px;
     margin: auto;
     margin-bottom: 30px;
-    padding-left: 0;
+    padding-left: 1em;
   }
   .functioning_cards {
     display: flex;
@@ -187,7 +259,7 @@ input[type=text] {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   /********* media queries **********/
 }
-@media screen and (min-width: 1055px) {
+@media screen and (min-width: 1024px) {
   .functioning_card {
     margin-left: 1em;
     margin-right: 2em;
@@ -221,11 +293,11 @@ input[type=text] {
   margin-bottom: 70px;
   /********* media queries **********/
 }
-@media screen and (min-width: 1055px) {
+@media screen and (min-width: 1024px) {
   #restaurants {
     max-width: 1055px;
     margin: auto;
-    padding: 0;
+    padding: 0 1em 0 1em;
     margin-bottom: 6px;
   }
 }
@@ -235,16 +307,16 @@ input[type=text] {
   margin-bottom: 1em;
   /********* media queries **********/
 }
-@media screen and (min-width: 1055px) {
+@media screen and (min-width: 1024px) {
   #restaurants article {
-    width: 498.65px;
+    width: 30em;
   }
 }
 #restaurants h2 {
   padding: 52px 0 16px 0;
   /********* media queries **********/
 }
-@media screen and (min-width: 1055px) {
+@media screen and (min-width: 1024px) {
   #restaurants h2 {
     padding: 28px 0 22px 0;
   }
@@ -270,10 +342,7 @@ input[type=text] {
   font-size: 23px;
 }
 
-.restaurants-list {
-  /********* media queries **********/
-}
-@media screen and (min-width: 1055px) {
+@media screen and (min-width: 1024px) {
   .restaurants-list {
     display: flex;
     justify-content: space-between;
@@ -284,13 +353,9 @@ input[type=text] {
 .restaurants_nouveau {
   color: #008766;
   background: #99E2D0;
-  width: 80px;
-  height: 25px;
-  padding-top: 7px;
-  position: absolute;
-  right: 10%;
-  margin-top: 12px;
-  font-weight: 500;
+  height: 1.34em;
+  padding: 0.5em;
+  margin: 4% 4% 0 71%;
   font-size: 14px;
   text-align: center;
 }
@@ -300,7 +365,13 @@ input[type=text] {
   justify-content: space-between;
 }
 .restaurants_card_heart {
-  margin: 25px;
+  margin: 0.8em 1.2em;
+  /********* media queries **********/
+}
+@media screen and (min-width: 1024px) {
+  .restaurants_card_heart {
+    margin: 0.8em 0.7em;
+  }
 }
 
 .restaurants_card_txt {
@@ -328,21 +399,12 @@ input[type=text] {
   }
 }
 
-.overlap {
-  display: grid;
-}
-
-.overlap > * {
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
-
 .menu {
   /********* media queries **********/
 }
-@media screen and (min-width: 634px) {
+@media screen and (min-width: 767.98px) {
   .menu {
-    width: 634px;
+    max-width: 634px;
     margin: auto;
   }
 }
@@ -357,16 +419,16 @@ input[type=text] {
   justify-content: space-between;
   /********* media queries **********/
 }
-@media screen and (min-width: 634px) {
+@media screen and (min-width: 767.98px) {
   .menu_title {
     justify-content: center;
   }
 }
 .menu_title_heart {
-  padding-top: 2.1em;
+  padding-top: 1.8em;
   /********* media queries **********/
 }
-@media screen and (min-width: 634px) {
+@media screen and (min-width: 767.98px) {
   .menu_title_heart {
     margin-left: 1.5em;
   }
@@ -405,11 +467,6 @@ input[type=text] {
 .menu_item-price {
   font-weight: 700;
   font-size: 15.0431px;
-}
-
-.button {
-  width: 12em;
-  margin-bottom: 1.5em;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,3 +12,12 @@ p {
     font-weight: 300;
     font-size: 18px;
 }
+
+.overlap {
+    display: grid;
+}
+
+.overlap>* {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
