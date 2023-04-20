@@ -1,45 +1,34 @@
-.restaurant-img {
-    width: 100%;
-    height: 275px;
-    object-fit: cover;
-}
-
-.menu-background {
-    background: $gris;
-    margin-top: 13.7em;
-    border-radius: 33px;
-    padding: 1em;
-
-    /********* media queries **********/
-    @media screen and (min-width: 1055px) {
-        width: 1055px;
-        margin: auto;
-        margin-top: 13.7em;
-    }
-}
-
-.menu {
-
-    /********* media queries **********/
-    @media screen and (min-width: 767.98px) {
-        max-width: 634px;
-        margin: auto;
+    /********* restaurant **********/
+    .restaurant-img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
     }
 
-    h2 {
-        padding-top: 0.8em;
-        font-family: 'Shrikhand';
-        font-weight: 400;
-        font-size: 28px;
-    }
-
-    &_title {
+    .restaurant {
         display: flex;
         justify-content: space-between;
+        background: $gris;
+        margin-top: 13.7em;
+        border-radius: 33px 33px 0 0;
+        padding: 1em 1em 0 1em;
 
         /********* media queries **********/
         @media screen and (min-width: 767.98px) {
             justify-content: center;
+        }
+
+        @media screen and (min-width: 1055px) {
+            width: 1055px;
+            margin: auto;
+            margin-top: 13.7em;
+        }
+
+        h2 {
+            padding-top: 0.8em;
+            font-family: 'Shrikhand';
+            font-weight: 400;
+            font-size: 28px;
         }
 
         &_heart {
@@ -50,51 +39,105 @@
                 margin-left: 1.5em;
             }
         }
-    }
 
-    h3 {
-        padding-top: 1.7em;
-        margin-bottom: 1.1em;
-        font-weight: 300;
-        font-size: 16px;
-        text-transform: uppercase;
+        &_heart:hover .full {
+            opacity: 1;
+        }
 
-        span {
-            border-bottom: $tertiaire 0.2rem solid;
-            padding-bottom: 0.3em;
+        &_heart i {
+            font-size: 25px;
         }
     }
 
-    h4 {
-        font-weight: 500;
-        font-size: 18px;
-        margin-bottom: 0.3em;
-    }
+    /***** menu ******/
+    .menu {
 
-    p {
-        font-weight: 300;
-        font-size: 15.0431px;
-        // white-space: nowrap;
-        // width: 80%;
-        // overflow: hidden;
-        // text-overflow: ellipsis;
-    }
+        /********* media queries **********/
+        @media screen and (min-width: 767.98px) {
+            max-width: 634px;
+            margin: auto;
+        }
 
-    &_item {
-        background: white;
-        padding: 0.8em;
-        margin: 0.8em 0;
-        border-radius: 15px;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        h3 {
+            padding-top: 1.7em;
+            margin-bottom: 1.1em;
+            font-weight: 300;
+            font-size: 16px;
+            text-transform: uppercase;
 
-        &_line {
+            span {
+                border-bottom: $tertiaire 0.2rem solid;
+                padding-bottom: 0.3em;
+            }
+        }
+
+        h4 {
+            font-weight: 500;
+            font-size: 18px;
+            margin-bottom: 0.3em;
+            @include ellipsis;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 15px;
+            @include ellipsis;
+        }
+
+        &-background {
+            background: $gris;
+            border-radius: 0 0 33px 33px;
+            padding: 0 1em 1em 1em;
+
+            /********* media queries **********/
+            @media screen and (min-width: 1055px) {
+                width: 1055px;
+                margin: auto;
+            }
+        }
+
+        &_item {
+            background: white;
+            margin: 0.8em 0;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             display: flex;
-            justify-content: space-between;
-        }
+            overflow: hidden;
 
-        &-price {
-            font-weight: 700;
-            font-size: 15.0431px;
+            &_line {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                overflow: hidden;
+                padding: 0.8em;
+            }
+
+            &_line_txt {
+                font-weight: 700;
+                font-size: 15px;
+                @include ellipsis;
+            }
+
+            &_line_price {
+                padding-top: 1.9em;
+                font-weight: 700;
+                font-size: 15px;
+            }
+
+            &_check {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 4em;
+                background: $tertiaire;
+                color: white;
+                text-align: center;
+                font-size: 19px;
+                margin-right: -4em
+            }
         }
     }
-}
+
+    .menu_item:hover .menu_item_check {
+        margin-right: 0;
+    }

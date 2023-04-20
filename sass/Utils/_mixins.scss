@@ -3,6 +3,13 @@
         background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
     }
 
+    /* ellipsis */
+    @mixin ellipsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
     /***** media queries ******/
     @mixin restaurants-list-queries {
         @media screen and (min-width: 1024px) {

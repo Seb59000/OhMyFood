@@ -34,7 +34,7 @@ input[type="text"] {
     padding-bottom: 28px;
 
     h2 {
-        padding: 33px 0 12px 0
+        padding: 33px 0 12px 0;
     }
 }
 
@@ -117,7 +117,6 @@ input[type="text"] {
 /***** restaurants *****/
 .restaurants-background {
     background: $gris;
-
 }
 
 #restaurants {
@@ -177,7 +176,6 @@ input[type="text"] {
     }
 }
 
-
 .restaurants-list {
     @include restaurants-list-queries;
 }
@@ -208,4 +206,8 @@ input[type="text"] {
 
 .restaurants_card_txt {
     margin: 10px 0 0 12px;
+}
+
+.restaurants_card_heart:hover .full {
+    opacity: 1;
 }

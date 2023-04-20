@@ -3,18 +3,6 @@
     opacity: 1;
 }
 
-.restaurants_card_heart:hover .full {
-    opacity: 1;
-}
-
-.menu_title_heart:hover .full {
-    opacity: 1;
-}
-
-.menu_title_heart i {
-    font-size: 25px;
-}
-
 .full {
     opacity: 0;
     @include shade;
