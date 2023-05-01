@@ -177,7 +177,11 @@ input[type="text"] {
 }
 
 .restaurants-list {
-    @include restaurants-list-queries;
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 .restaurants_nouveau {
@@ -206,8 +210,4 @@ input[type="text"] {
 
 .restaurants_card_txt {
     margin: 10px 0 0 12px;
-}
-
-.restaurants_card_heart:hover .full {
-    opacity: 1;
 }

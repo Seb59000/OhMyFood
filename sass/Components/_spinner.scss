@@ -1,0 +1,42 @@
+/**** spinner ****/
+body {
+    position: relative;
+}
+
+$loading-dur : 3000ms;
+
+.fa-spinner {
+    top: 30%;
+    position: fixed;
+    z-index: 400;
+    font-size: 180px;
+    color: $secondaire;
+}
+
+.spinner-container {
+    position: absolute;
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+
+    display: flex;
+    justify-content: center;
+
+    animation: loading $loading-dur forwards;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}

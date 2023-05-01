@@ -4,8 +4,16 @@
 }
 
 .full {
-    opacity: 0;
     @include shade;
+    opacity: 0;
+    transition: opacity 1000ms;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.hearts {
+    &:hover .full {
+        opacity: 1;
+        cursor: pointer;
+    }
 }

@@ -1,0 +1,33 @@
+/* apparition des items du menu*/
+$apparition-dur: 3000ms;
+$delay: 500ms;
+
+@for $i from 0 through 4 {
+    .item-#{$i} {
+        animation: apparition $apparition-dur calc($delay*$i) both;
+    }
+}
+
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: translateY(1em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* survol des items du menu */
+
+.menu_item {
+    &:hover .menu_item_check {
+        margin-right: 0;
+    }
+
+    &_check {
+        transition: margin-right 700ms ease-in-out;
+    }
+}

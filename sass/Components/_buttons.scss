@@ -1,3 +1,7 @@
+/***** button *****/
+$border-rad: 25px;
+$clr-btn: #15DEA5;
+
 .button {
     display: block;
     margin: auto;
@@ -5,7 +9,7 @@
     margin-bottom: 40px;
     width: 218px;
     padding: 1em 0;
-    border-radius: 25px;
+    border-radius: $border-rad;
     font-weight: 500;
     font-size: 16px;
     text-align: center;
@@ -13,6 +17,30 @@
     @include shade;
     /* Shadow/Button */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: $border-rad;
+        /* Shadow/Button */
+        background: linear-gradient(0deg, lighten($primaire, 5) -11.44%, lighten($secondaire, 5) 123.93%);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        transition: opacity 1000ms;
+    }
 }
 
 .btn-small {

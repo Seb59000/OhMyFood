@@ -1,6 +1,5 @@
 /* Gradient */
 /* ellipsis */
-/***** media queries ******/
 /****** General ***********/
 * {
   margin: 0;
@@ -29,6 +28,82 @@ p {
   font-size: 18px;
 }
 
+/* apparition des items du menu*/
+.item-0 {
+  animation: apparition 3000ms 0ms both;
+}
+
+.item-1 {
+  animation: apparition 3000ms 500ms both;
+}
+
+.item-2 {
+  animation: apparition 3000ms 1000ms both;
+}
+
+.item-3 {
+  animation: apparition 3000ms 1500ms both;
+}
+
+.item-4 {
+  animation: apparition 3000ms 2000ms both;
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(1em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* survol des items du menu */
+.menu_item:hover .menu_item_check {
+  margin-right: 0;
+}
+.menu_item_check {
+  transition: margin-right 700ms ease-in-out;
+}
+
+/**** spinner ****/
+body {
+  position: relative;
+}
+
+.fa-spinner {
+  top: 30%;
+  position: fixed;
+  z-index: 400;
+  font-size: 180px;
+  color: #FF79DA;
+}
+
+.spinner-container {
+  position: absolute;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  animation: loading 3000ms forwards;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+/***** button *****/
 .button {
   display: block;
   margin: auto;
@@ -44,6 +119,26 @@ p {
   background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   /* Shadow/Button */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.button:hover::after {
+  opacity: 1;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  /* Shadow/Button */
+  background: linear-gradient(0deg, #a16be0 -11.44%, #ff93e1 123.93%);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 1000ms;
 }
 
 .btn-small {
@@ -57,10 +152,16 @@ p {
 }
 
 .full {
-  opacity: 0;
   background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  opacity: 0;
+  transition: opacity 1000ms;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hearts:hover .full {
+  opacity: 1;
+  cursor: pointer;
 }
 
 /***** header *****/
@@ -367,10 +468,6 @@ input[type=text] {
   margin: 10px 0 0 12px;
 }
 
-.restaurants_card_heart:hover .full {
-  opacity: 1;
-}
-
 /********* restaurant **********/
 .restaurant-img {
   width: 100%;
@@ -414,9 +511,6 @@ input[type=text] {
     margin-left: 1.5em;
   }
 }
-.restaurant_heart:hover .full {
-  opacity: 1;
-}
 .restaurant_heart i {
   font-size: 25px;
 }
@@ -457,14 +551,14 @@ input[type=text] {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu-background {
+.menu-container {
   background: #F6F6F6;
   border-radius: 0 0 33px 33px;
   padding: 0 1em 1em 1em;
   /********* media queries **********/
 }
 @media screen and (min-width: 1055px) {
-  .menu-background {
+  .menu-container {
     width: 1055px;
     margin: auto;
   }
@@ -506,10 +600,6 @@ input[type=text] {
   text-align: center;
   font-size: 19px;
   margin-right: -4em;
-}
-
-.menu_item:hover .menu_item_check {
-  margin-right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
