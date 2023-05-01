@@ -30,23 +30,23 @@ p {
 
 /* apparition des items du menu*/
 .item-0 {
-  animation: apparition 3000ms 0ms both;
+  animation: apparition 1500ms 0ms both;
 }
 
 .item-1 {
-  animation: apparition 3000ms 500ms both;
+  animation: apparition 1500ms 450ms both;
 }
 
 .item-2 {
-  animation: apparition 3000ms 1000ms both;
+  animation: apparition 1500ms 900ms both;
 }
 
 .item-3 {
-  animation: apparition 3000ms 1500ms both;
+  animation: apparition 1500ms 1350ms both;
 }
 
 .item-4 {
-  animation: apparition 3000ms 2000ms both;
+  animation: apparition 1500ms 1800ms both;
 }
 
 @keyframes apparition {
@@ -374,19 +374,14 @@ input[type=text] {
 }
 
 /***** restaurants *****/
-.restaurants-background {
-  background: #F6F6F6;
-}
-
 #restaurants {
   padding: 0 4% 0 4%;
   margin-bottom: 70px;
+  background: #F6F6F6;
   /********* media queries **********/
 }
 @media screen and (min-width: 1024px) {
   #restaurants {
-    max-width: 1055px;
-    margin: auto;
     padding: 0 1em 0 1em;
     margin-bottom: 6px;
   }
@@ -408,6 +403,8 @@ input[type=text] {
 }
 @media screen and (min-width: 1024px) {
   #restaurants h2 {
+    max-width: 1055px;
+    margin: auto;
     padding: 28px 0 22px 0;
   }
 }
@@ -434,6 +431,8 @@ input[type=text] {
 
 @media screen and (min-width: 1024px) {
   .restaurants-list {
+    max-width: 1055px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

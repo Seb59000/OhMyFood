@@ -1,6 +1,6 @@
 /* apparition des items du menu*/
-$apparition-dur: 3000ms;
-$delay: 500ms;
+$apparition-dur: 1500ms;
+$delay: 450ms;
 
 @for $i from 0 through 4 {
     .item-#{$i} {

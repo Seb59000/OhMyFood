@@ -115,18 +115,14 @@ input[type="text"] {
 }
 
 /***** restaurants *****/
-.restaurants-background {
-    background: $gris;
-}
 
 #restaurants {
     padding: 0 4% 0 4%;
     margin-bottom: 70px;
+    background: $gris;
 
     /********* media queries **********/
     @media screen and (min-width: 1024px) {
-        max-width: 1055px;
-        margin: auto;
         padding: 0 1em 0 1em;
         margin-bottom: 6px;
     }
@@ -147,6 +143,8 @@ input[type="text"] {
 
         /********* media queries **********/
         @media screen and (min-width: 1024px) {
+            max-width: 1055px;
+            margin: auto;
             padding: 28px 0 22px 0;
         }
     }
@@ -178,6 +176,8 @@ input[type="text"] {
 
 .restaurants-list {
     @media screen and (min-width: 1024px) {
+        max-width: 1055px;
+        margin: auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
