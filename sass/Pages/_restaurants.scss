@@ -86,7 +86,7 @@
             padding: 0 1em 1em 1em;
 
             /********* media queries **********/
-            @media screen and (min-width: 1055px) {
+            @media screen and (min-width: 1024px) {
                 width: 1055px;
                 margin: auto;
             }
@@ -99,7 +99,6 @@
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             display: flex;
             overflow: hidden;
-            // transition: transform 2000ms ease-in-out;
 
             &_line {
                 display: flex;
@@ -130,15 +129,7 @@
                 color: white;
                 text-align: center;
                 font-size: 19px;
-                // transform: translate(4em, 0);
-
-                // translate: (-4em, 0);
                 margin-right: -4em;
             }
         }
-    }
-
-    .menu_item:hover>.menu_item_check {
-        // margin-right: 0;
-        // transform: translate(-2em, 0);
     }

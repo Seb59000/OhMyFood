@@ -1,14 +1,11 @@
 /****** hearts *******/
-.empty {
-    opacity: 1;
-}
-
 .full {
     @include shade;
-    opacity: 0;
-    transition: opacity 1000ms;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .hearts {
