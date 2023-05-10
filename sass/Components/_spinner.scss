@@ -19,13 +19,13 @@ $loading-dur : 3000ms;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.65);
-
     display: flex;
     justify-content: center;
 
     animation: loading $loading-dur forwards;
 }
 
+/* animation disparition background */
 @keyframes loading {
     0% {
         opacity: 1;
@@ -38,5 +38,16 @@ $loading-dur : 3000ms;
     100% {
         opacity: 0;
         z-index: -1;
+    }
+}
+
+.rotate {
+    animation: rotate 1.5s steps(8) infinite;
+}
+
+/* animation rotation */
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
     }
 }
